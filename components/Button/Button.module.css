@@ -1,0 +1,27 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 16px;
+  border: none;
+  text-align: center;
+}
+.primary {
+  background-color: #000000;
+  color: white;
+  padding: 12px 32px;
+}
+.secondary {
+  border: 1px solid #000000;
+  background: transparent;
+  color: #000000;
+}
+.mdButton {
+  width: 277px;
+  height: 48px;
+}
+.blockButton {
+  width: 100%;
+  height: 48px;
+}

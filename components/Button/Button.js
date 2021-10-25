@@ -1,18 +1,28 @@
+import React from "react";
+import styles from "./Button.module.css";
 import PropTypes from "prop-types";
-import "./Button.css";
+import cn from "classnames";
 
-function Button({ label, handleClick }) {
+const Button = (args) => {
+  const { label, variations, size } = args;
+
   return (
-    <button className="buttonContainer" onClick={handleClick}>
+    <button
+      className={cn(styles.button, {
+        [styles.primary]: variations === "primary",
+        [styles.secondary]: variations === "secondary",
+        [styles.mdButton]: size === "md",
+        [styles.blockButton]: size === "block",
+      })}>
       {label}
     </button>
   );
-}
+};
 
 Button.propTypes = {
   label: PropTypes.string,
-  backgroundColor: PropTypes.string,
-  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  variations: PropTypes.oneOf(["primary", "secondary"]),
+  size: PropTypes.oneOf(["md", "block"]),
   handleClick: PropTypes.func,
 };
 
