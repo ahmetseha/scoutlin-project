@@ -1,11 +1,9 @@
-import Button from "../components/Button/Button";
-import PlusIcon from "../components/icons/iconsFiles/Plus";
+import AwardsCard from "../components/Awards/AwardsCard/AwardsCard";
 
 export default function Home() {
   return (
     <div>
-      <PlusIcon />
-      <Button variations="primary" label="New Award" size="md" />
+      <AwardsCard variations="awardsCard" />
     </div>
   );
 }

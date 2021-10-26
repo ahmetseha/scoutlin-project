@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+.container svg {
+  width: 86px;
+  height: 86px;
+  background: #ffffff;
+}
+.awardsCard {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  width: 176.67px;
+  height: 254px;
+}
+.responsiveAwardsCard {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  width: 366px;
+  height: 126px;
+}
