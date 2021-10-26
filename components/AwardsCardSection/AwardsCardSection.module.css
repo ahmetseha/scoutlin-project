@@ -1,15 +1,11 @@
 .container {
   width: 578px;
-  border: 1px solid #ddd;
   padding: 32px 0px;
-  text-align: center;
 }
 .CardSectionContent {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 16px 56px 16px 47px;
+  flex-direction: row;
+  align-items: flex-start;
 }
 .CardSectionSvg {
   margin-bottom: 16px;
@@ -29,4 +25,9 @@
   font-size: 14px;
   line-height: 16px;
   color: #757575;
+}
+.awardsCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 24px;
 }

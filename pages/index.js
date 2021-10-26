@@ -1,10 +1,10 @@
-import CloseButton from "../components/CloseButton/CloseButton";
+import AwardsContainer from "../components/AwardsContainer/AwardsContainer";
 import styles from "./index.module.css";
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <CloseButton />
+      <AwardsContainer />
     </div>
   );
 }

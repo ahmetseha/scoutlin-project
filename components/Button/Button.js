@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 
 const Button = (args) => {
-  const { label, variations, size } = args;
+  const { label, variations, size, ...props } = args;
 
   return (
     <button
@@ -13,8 +13,9 @@ const Button = (args) => {
         [styles.secondary]: variations === "secondary",
         [styles.mdButton]: size === "md",
         [styles.blockButton]: size === "block",
-      })}>
-      {label}
+      })}
+      {...props}>
+      <span>{label}</span>
     </button>
   );
 };
