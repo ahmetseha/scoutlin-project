@@ -3,7 +3,7 @@ import React from "react";
 import AwardsCard from "./AwardsCard";
 
 export default {
-  title: "components/Awards/AwardsCard",
+  title: "components/AwardsCard",
   component: AwardsCard,
 };
 

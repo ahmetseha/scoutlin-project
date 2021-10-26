@@ -1,0 +1,22 @@
+.container {
+  left: 0;
+  margin-bottom: 13px;
+}
+.closeButtonContent {
+  display: flex;
+  align-items: center;
+  margin: 6px 0;
+}
+.closeButtonSvg {
+  margin-right: 8px;
+}
+.closeButtonSvg svg {
+  width: 24px;
+  height: 24px;
+}
+.closeButtonTitle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  margin: 4px 0;
+}

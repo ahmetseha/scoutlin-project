@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  margin: 0 24px;
+  position: relative;
+}
+.container:hover .trashDeleteIcon {
+  display: block;
+}
+.awardsCard {
+  border: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  width: 176.67px;
+  height: 254px;
+  left: 0px;
+  top: 0px;
+}
+.responsiveAwardsCard {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+  width: 366px;
+  height: 126px;
+}
+
+.awardsCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 32px 32.67px 29px 32px;
+}
+.trashDeleteIcon {
+  display: none;
+  position: absolute;
+  left: 138px;
+  top: 20px;
+}
+.trashDeleteIcon svg {
+  width: 24px;
+  height: 24px;
+}
+.awardIcon {
+  background: #ffffff;
+  margin: 0 0 40px 0;
+}
+.awardIcon svg {
+  width: 86px;
+  height: 86px;
+  margin: 0 13px;
+}
+.awardsTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.awardsTitleFeature {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 6px;
+  margin: 0 4px 4px 4px;
+  opacity: 0.5;
+}
+.awardTitleRating {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 4px;
+}
+.awardsTitleName {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+}

@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./AwardsCard.module.css";
 import PropTypes from "prop-types";
 import cn from "classnames";
-import Award from "../../icons/Award";
+import Award from "../icons/Award";
+import TrashDelete from "../icons/TrashDelete";
 
 const AwardsCard = (args) => {
   const { variations } = args;
@@ -13,9 +14,18 @@ const AwardsCard = (args) => {
         [styles.awardsCard]: variations === "awardsCard",
         [styles.responsiveAwardsCard]: variations === "responsiveAwardsCard",
       })}>
-      <Award />
-      <div className={styles.awardsTitle}>
-        <p className={styles.awardsTitleHead}></p>
+      <div className={styles.trashDeleteIcon}>
+        <TrashDelete />
+      </div>
+      <div className={styles.awardsCardContent}>
+        <div className={styles.awardIcon}>
+          <Award />
+        </div>
+        <div className={styles.awardsTitle}>
+          <h5 className={styles.awardsTitleFeature}>FEATURED</h5>
+          <p className={styles.awardTitleRating}>Silver</p>
+          <h5 className={styles.awardsTitleName}>Kristal Elma</h5>
+        </div>
       </div>
     </div>
   );

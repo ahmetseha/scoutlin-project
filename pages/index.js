@@ -1,9 +1,10 @@
-import AwardsCard from "../components/Awards/AwardsCard/AwardsCard";
+import CloseButton from "../components/CloseButton/CloseButton";
+import styles from "./index.module.css";
 
 export default function Home() {
   return (
-    <div>
-      <AwardsCard variations="awardsCard" />
+    <div className={styles.container}>
+      <CloseButton />
     </div>
   );
 }

@@ -8,7 +8,8 @@ function SvgEmptyAwardSection(props) {
       viewBox="0 0 229 170"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}>
+      {...props}
+    >
       <g clipPath="url(#EmptyAwardSection_svg__clip0_1:783)">
         <path
           d="M124.669 38.387l-10.445 33.371-28.735 18.036-3.21 14.317-50.286 14.011-26.24 93.899L223.46 227l-45.344-120.24-5.35-18.036-27.971-7.438-5.91-33.881-14.215-9.018z"
@@ -198,7 +199,8 @@ function SvgEmptyAwardSection(props) {
           y1={11.418}
           x2={115.798}
           y2={165.342}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -208,7 +210,8 @@ function SvgEmptyAwardSection(props) {
           y1={31.036}
           x2={143.192}
           y2={94.6}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -218,7 +221,8 @@ function SvgEmptyAwardSection(props) {
           y1={79.685}
           x2={173.057}
           y2={186.955}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -228,7 +232,8 @@ function SvgEmptyAwardSection(props) {
           y1={85.743}
           x2={55.785}
           y2={142.22}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -238,7 +243,8 @@ function SvgEmptyAwardSection(props) {
           y1={122.994}
           x2={75.1}
           y2={161.753}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -248,7 +254,8 @@ function SvgEmptyAwardSection(props) {
           y1={25.055}
           x2={83.809}
           y2={24.95}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#FF000F" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -258,7 +265,8 @@ function SvgEmptyAwardSection(props) {
           y1={18.687}
           x2={79.94}
           y2={20.355}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#FF000F" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -268,7 +276,8 @@ function SvgEmptyAwardSection(props) {
           y1={22.874}
           x2={138.119}
           y2={32.371}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -278,7 +287,8 @@ function SvgEmptyAwardSection(props) {
           y1={14.853}
           x2={135.423}
           y2={20.754}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
@@ -288,7 +298,8 @@ function SvgEmptyAwardSection(props) {
           y1={19.303}
           x2={136.965}
           y2={25.796}
-          gradientUnits="userSpaceOnUse">
+          gradientUnits="userSpaceOnUse"
+        >
           <stop stopColor="#D8D8D8" />
           <stop offset={1} stopColor="currentColor" stopOpacity={0} />
         </linearGradient>
