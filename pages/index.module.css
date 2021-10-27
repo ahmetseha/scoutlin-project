@@ -1,4 +1,23 @@
 .container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.rewardButtonContainer {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+.rewardButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: white;
+  width: 277px;
+  height: 48px;
+  text-align: center;
 }

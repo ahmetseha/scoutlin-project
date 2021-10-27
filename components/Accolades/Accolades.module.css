@@ -4,6 +4,8 @@
   line-height: 28px;
 }
 .container p {
+  font-style: normal;
+  font-weight: normal;
   margin-top: 4px;
   font-size: 14px;
   line-height: 16px;

@@ -3,12 +3,16 @@ import Disable from "../icons/Disable";
 
 const CloseButton = (args) => {
   return (
-    <div className={styles.container} {...args}>
-      <div className={styles.closeButtonContent}>
-        <div className={styles.closeButtonSvg}>
-          <Disable />
+    <div className={styles.container}>
+      <div className={styles.closeButton}>
+        <div className={styles.closeButtonContent} {...args}>
+          <div className={styles.closeButtonSvg}>
+            <Disable />
+          </div>
+          <div className={styles.title}>
+            <p className={styles.closeButtonTitle}>Close</p>
+          </div>
         </div>
-        <p className={styles.closeButtonTitle}>Close</p>
       </div>
     </div>
   );
