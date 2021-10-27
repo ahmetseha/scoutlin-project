@@ -34,7 +34,7 @@ function SvgAward(props) {
           d="M25.332 69.329h35.235v8.74H25.332v-8.74z"
           fill="white"
           stroke="#424242"
-          strokeWidth={0.224}
+          whitestrokeWidth={0.224}
         />
         <path
           d="M63.879 78.181H22.021l-5.14 2.346h52.138l-5.14-2.346zM55.801 66.767H30.099l-4.878 2.45h35.458l-4.878-2.45z"

@@ -1,7 +1,7 @@
 // import { useState } from "react";
 import AwardsContainer from "../components/AwardsContainer/AwardsContainer";
 import styles from "./index.module.css";
-import InputSection from "../components/InputSection/InputSection";
+import AccoladesPreview from "../components/AccoladesPreview/AccoladesPreview";
 
 export default function Home() {
   // const [showContainer, setShowContainer] = useState(false);
@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       )}
       {showContainer ? <AwardsContainer /> : null} */}
-      <InputSection />
+      <AccoladesPreview />
     </div>
   );
 }
