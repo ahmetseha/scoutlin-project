@@ -1,0 +1,32 @@
+.container {
+  width: 578px;
+  padding: 32px 0px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.CardSectionContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px 56px 16px 47px;
+}
+.CardSectionSvg {
+  margin-bottom: 16px;
+}
+.CardSectionSvg svg {
+  width: 229px;
+  height: 170px;
+}
+.CardSectionStatement h5 {
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  margin-bottom: 12px;
+}
+.CardSectionStatement p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #757575;
+}

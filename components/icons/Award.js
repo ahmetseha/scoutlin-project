@@ -8,12 +8,11 @@ function SvgAward(props) {
       viewBox="0 0 87 86"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+      {...props}>
       <g clipPath="url(#award_svg__clip0_1:1427)">
         <path
           d="M38.031 67.039l-18.7-46.534L42.95.33l23.62 20.176L47.868 67.04h-9.838z"
-          fill="currentColor"
+          fill="white"
           stroke="#424242"
           strokeWidth={0.5}
         />
@@ -27,13 +26,13 @@ function SvgAward(props) {
         />
         <path
           d="M31.174 67.3L12.23 39.686l2.707-6.775 7.17 1.295L36.69 67.3H31.174zM49.155 67.3L63.74 34.206l7.222-1.295 2.707 6.775L54.725 67.3h-5.57z"
-          fill="currentColor"
+          fill="white"
           stroke="#424242"
           strokeWidth={0.5}
         />
         <path
           d="M25.332 69.329h35.235v8.74H25.332v-8.74z"
-          fill="currentColor"
+          fill="white"
           stroke="#424242"
           strokeWidth={0.224}
         />
@@ -43,18 +42,14 @@ function SvgAward(props) {
         />
         <path
           d="M17.13 80.777h51.64v4.973H17.13v-4.973z"
-          fill="currentColor"
+          fill="white"
           stroke="#424242"
           strokeWidth={0.5}
         />
       </g>
       <defs>
         <clipPath id="award_svg__clip0_1:1427">
-          <path
-            fill="currentColor"
-            transform="translate(.333)"
-            d="M0 0h86v86H0z"
-          />
+          <path fill="white" transform="translate(.333)" d="M0 0h86v86H0z" />
         </clipPath>
       </defs>
     </svg>

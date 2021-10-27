@@ -2,6 +2,7 @@ import styles from "./AwardsContainer.module.css";
 import CloseButton from "../CloseButton/CloseButton";
 import Accolades from "../Accolades/Accolades";
 import AwardsCardSection from "../AwardsCardSection/AwardsCardSection";
+import AwardsCardSectionEmpty from "../AwardsCardSectionEmpty/AwardsCardSectionEmpty";
 import Button from "../Button/Button";
 
 const AwardsContainer = () => {

@@ -24,7 +24,7 @@ const AwardsCard = (args) => {
         <div className={styles.awardsTitle}>
           <h5 className={styles.awardsTitleFeature}>FEATURED</h5>
           <p className={styles.awardTitleRating}>Silver</p>
-          <h5 className={styles.awardsTitleName}>Kristal Elma</h5>
+          <h5 className={styles.awardsTitleCompetiton}>Kristal Elma</h5>
         </div>
       </div>
     </div>

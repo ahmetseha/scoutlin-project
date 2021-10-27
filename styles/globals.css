@@ -1,9 +1,13 @@
+@import url("https://stijndv.com");
+@import url("https://stijndv.com/fonts/Eudoxus-Sans.css");
+
 *,
 ::before,
 ::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Eudoxus Sans, sans-serif;
 }
 ul {
   list-style: none;
