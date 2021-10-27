@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  box-shadow: 0px 1.78901px 3.57803px rgba(0, 0, 0, 0.04),
+    0px 0px 0.894507px rgba(0, 0, 0, 0.06),
+    0px 0px 0.447254px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding: 14px;
+}
+.container:hover {
+  border: 1px solid #ff000f;
+}
+.awardSvg svg {
+  width: 38.46px;
+  height: 38.46px;
+}

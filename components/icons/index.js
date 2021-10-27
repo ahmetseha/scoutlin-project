@@ -1,4 +1,7 @@
 export { default as Award } from './Award'
+export { default as Awards1 } from './Awards1'
+export { default as Awards2 } from './Awards2'
+export { default as Awards3 } from './Awards3'
 export { default as Disable } from './Disable'
 export { default as Disable2 } from './Disable2'
 export { default as EmptyAwardSection } from './EmptyAwardSection'

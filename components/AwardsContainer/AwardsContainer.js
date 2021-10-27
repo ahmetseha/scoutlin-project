@@ -23,9 +23,12 @@ const AwardsContainer = () => {
         <div className={styles.container}>
           <div className={styles.awardsHead}>
             <CloseButton onClick={closeTheContainer} />
-            <Accolades />
+            <Accolades
+              head="Accolades"
+              explanation="Determine how much minimum wage you work."
+            />
           </div>
-          <AwardsCardSection />
+          <AwardsCardSectionEmpty />
           <div className={styles.buttonGroup}>
             <Button variations="secondary" size="md" label="Exit" />
             <Button variations="primary" size="md" label="New Award" />

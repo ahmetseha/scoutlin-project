@@ -8,5 +8,5 @@ export default {
 };
 
 export const closeButton = (args) => {
-  <CloseButton {...args} />;
+  return <CloseButton {...args} />;
 };

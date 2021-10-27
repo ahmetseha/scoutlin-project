@@ -1,15 +1,21 @@
 import styles from "./Accolades.module.css";
-import cn from "classnames";
+import PropTypes from "prop-types";
 
-const Accolades = () => {
+const Accolades = (args) => {
+  const { head, explanation, ...props } = args;
+
   return (
-    <div className={styles.container}>
-      <div className={(cn(styles.accolades), {})}>
-        <h5>Accolades</h5>
-        <p>Determine how much minimum wage you work.</p>
+    <div className={styles.container} {...props}>
+      <div>
+        <h5>{head}</h5>
+        <p>{explanation}</p>
       </div>
     </div>
   );
+};
+
+Accolades.propTypes = {
+  option: PropTypes.oneOf(["accoladesContent", "accoladesAboutCreathive"]),
 };
 
 export default Accolades;

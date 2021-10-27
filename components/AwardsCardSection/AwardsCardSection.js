@@ -7,8 +7,6 @@ const AwardsCardSection = (args) => {
     <div className={styles.container} {...args}>
       <div className={styles.awardsCards}>
         <AwardsCard variations="awardsCard" />
-        <AwardsCard variations="awardsCard" />
-        <AwardsCard variations="awardsCard" />
       </div>
     </div>
   );
