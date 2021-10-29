@@ -25,11 +25,14 @@
   width: 100%;
 }
 .container .accoladesPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   margin-bottom: 32px;
 }
 .container .buttonGroup {
   display: flex;
-  justify-content: space-around;
   grid-gap: 24px;
 }
 @media (max-width: 600px) {
