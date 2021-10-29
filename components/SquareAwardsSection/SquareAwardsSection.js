@@ -10,22 +10,26 @@ const SquareAwardsSection = () => {
 
   return (
     <div className={styles.container}>
-      {
-        (biggerThan600 && <Left />,
-        (<SquareAwards />),
-        (<SquareAwards />),
-        (<SquareAwards />),
-        (<SquareAwards />),
-        (<SquareAwards />),
-        (<Right />))
-      }
-      {
-        (!biggerThan600 && <Left />,
-        (<SquareAwards />),
-        (<SquareAwards />),
-        (<SquareAwards />),
-        (<Right />))
-      }
+      {!biggerThan600 && (
+        <div className={styles.container}>
+          <Left />
+          <SquareAwards />
+          <SquareAwards />
+          <SquareAwards />
+          <SquareAwards />
+          <SquareAwards />
+          <Right />
+        </div>
+      )}
+      {biggerThan600 && (
+        <div className={styles.container}>
+          <Left />
+          <SquareAwards />
+          <SquareAwards />
+          <SquareAwards />
+          <Right />
+        </div>
+      )}
     </div>
   );
 };

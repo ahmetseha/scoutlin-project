@@ -48,7 +48,6 @@
   margin-bottom: 12px;
 }
 .container .previewContent .cardAndInput .responsiveCard input {
-  width: 58px;
   height: 37px;
   background: #ffffff;
   border: 1px solid #eaeaea;
@@ -81,5 +80,11 @@
   .container .previewContent .cardAndInput {
     display: flex;
     flex-direction: column;
+  }
+  .container .inputSection {
+    margin: 0 16px;
+  }
+  .container .saveButton {
+    margin: 0 16px;
   }
 }
