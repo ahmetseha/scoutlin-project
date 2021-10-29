@@ -20,3 +20,10 @@ export const responsiveAwardsCard = (args) => {
 responsiveAwardsCard.args = {
   variations: "responsiveAwardsCard",
 };
+
+export const awardsCardWithoutDelete = (args) => {
+  return <AwardsCard {...args} />;
+};
+responsiveAwardsCard.args = {
+  variations: "awardsCardWithoutDelete",
+};

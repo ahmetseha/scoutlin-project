@@ -3,6 +3,7 @@
   width: 281px;
   height: 58px;
 }
+
 .container input {
   width: 100%;
   background: #fafafa;
@@ -13,8 +14,9 @@
   line-height: 16px;
 }
 .container input::placeholder {
-  font-size: 22px;
-  line-height: 14px;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
 }
 .container .inputValue {
   display: flex;
@@ -32,4 +34,12 @@
 }
 .container .inputValue .value {
   color: #ffb037;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+  .container .inputValue {
+    display: none;
+  }
 }

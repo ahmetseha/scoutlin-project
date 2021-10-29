@@ -17,7 +17,9 @@
     "prop-types": "^15.7.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "storybook-css-modules-preset": "^1.1.1"
+    "react-media-hook": "^0.4.9",
+    "storybook-css-modules-preset": "^1.1.1",
+    "uniqid": "^5.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",

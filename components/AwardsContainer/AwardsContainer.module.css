@@ -8,13 +8,61 @@
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
   border-radius: 24px;
 }
-.awardsHead {
+.container .awardsHead {
   margin-bottom: 32px;
 }
-.buttonGroup {
+.container .awardsHead .mobileHeader {
+  display: none;
+}
+.container .accoladesPreview {
+  margin-bottom: 32px;
+}
+.container .buttonGroup {
   display: flex;
   justify-content: space-around;
+  grid-gap: 24px;
 }
-.buttonGroup button:first-child {
-  margin-right: 24px;
+@media (max-width: 600px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    box-shadow: none;
+    border-radius: none;
+  }
+  .container .awardsHead {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #f0f2f4;
+    box-shadow: 0px 20px 24px -10px rgba(38, 50, 56, 0.06),
+      0px 20px 20px -5px rgba(0, 0, 0, 0.06);
+  }
+  .container .awardsHead .mobileHeader {
+    display: block;
+  }
+  .container .awardsHead .accolades {
+    height: 83px;
+  }
+  .container .accoladesPreview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container .awardsCardSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 207px;
+  }
+  .container .buttonGroup {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+    padding: 0 24px 24px 24px;
+    width: 100%;
+  }
+  .container .buttonGroup button {
+    width: 100%;
+  }
 }

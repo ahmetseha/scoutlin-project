@@ -31,3 +31,8 @@
   height: 16px;
   margin: 4px 0;
 }
+@media (max-width: 600px) {
+  .container {
+    display: none;
+  }
+}

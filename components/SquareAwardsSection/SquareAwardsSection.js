@@ -10,8 +10,6 @@ const SquareAwardsSection = () => {
       <SquareAwards />
       <SquareAwards />
       <SquareAwards />
-      <SquareAwards />
-      <SquareAwards />
       <Right />
     </div>
   );

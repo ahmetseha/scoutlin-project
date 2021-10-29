@@ -25,3 +25,18 @@
   font-size: 14px;
   line-height: 16px;
 }
+@media (max-width: 600px) {
+  .container {
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    width: 97px;
+    height: 42px;
+    padding: 12px 20px 12px 16px;
+  }
+  .trashDeleteSvg {
+    margin-right: 4px;
+  }
+  .container .text {
+    line-height: 18px;
+  }
+}

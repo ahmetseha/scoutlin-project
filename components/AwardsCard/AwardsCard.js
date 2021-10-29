@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./AwardsCard.module.css";
 import PropTypes from "prop-types";
 import cn from "classnames";
@@ -7,14 +7,21 @@ import TrashDelete from "../icons/TrashDelete";
 
 const AwardsCard = (args) => {
   const { variations } = args;
+  const [removeCard, setRemoveCard] = useState([]);
+
+  const removeAwardsCard = (id) => {
+    setRemoveCard((removeCard) => removeCard.filter((q) => q.id !== id));
+  };
 
   return (
     <div
       className={cn(styles.container, {
         [styles.awardsCard]: variations === "awardsCard",
         [styles.responsiveAwardsCard]: variations === "responsiveAwardsCard",
+        [styles.awardsCardWithoutDelete]:
+          variations === "awardsCardWithoutDelete",
       })}>
-      <div className={styles.trashDeleteIcon}>
+      <div className={styles.trashDeleteIcon} onClick={removeAwardsCard}>
         <TrashDelete />
       </div>
       <div className={styles.awardsCardContent}>
@@ -32,7 +39,11 @@ const AwardsCard = (args) => {
 };
 
 AwardsCard.propTypes = {
-  variations: PropTypes.oneOf(["awardsCard", "responsiveAwardsCard"]),
+  variations: PropTypes.oneOf([
+    "awardsCard",
+    "responsiveAwardsCard",
+    "awardsCardWithoutDelete",
+  ]),
 };
 
 export default AwardsCard;

@@ -1,13 +1,33 @@
-.container h5 {
+.container .accoladesContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container .accoladesContent .accoladesHead {
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;
 }
-.container p {
+.container .accoladesContent .accoladesExplanation {
   font-style: normal;
   font-weight: normal;
   margin-top: 4px;
   font-size: 14px;
   line-height: 16px;
   color: #757575;
+}
+.container .accoladesContent .accoladesDisableSvg {
+  display: none;
+}
+.container .accoladesContent .accoladesDisableSvg svg {
+  width: 28px;
+  height: 28px;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 16px 24px;
+  }
+  .container .accoladesContent .accoladesDisableSvg {
+    display: flex;
+  }
 }

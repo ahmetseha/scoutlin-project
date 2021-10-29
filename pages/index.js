@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       )}
       {showContainer ? <AwardsContainer /> : null} */}
-      <AccoladesPreview />
+      <AwardsContainer />
     </div>
   );
 }
