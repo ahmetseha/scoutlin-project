@@ -5,3 +5,8 @@
   flex-direction: column;
   grid-gap: 16px;
 }
+@media (max-width: 600px) {
+  .container {
+    margin: 0 16px;
+  }
+}

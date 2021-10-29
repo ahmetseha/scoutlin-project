@@ -14,6 +14,16 @@
 .container .awardsHead .mobileHeader {
   display: none;
 }
+.container .awardsCardsContainer {
+  display: flex;
+}
+.container .awardsCardsContainer .awardsCards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 24px;
+  margin-bottom: 32px;
+  width: 100%;
+}
 .container .accoladesPreview {
   margin-bottom: 32px;
 }
@@ -50,10 +60,17 @@
     align-items: center;
     justify-content: center;
   }
-  .container .awardsCardSection {
+  .container .awardsCardsContainer {
+    height: 412px;
+    margin: 0 24px;
+  }
+  .container .awardsCardsContainer {
+    width: 90%;
+    margin: 0 24px;
+  }
+  .container .awardsCardsContainer .awardsCards {
     display: flex;
-    justify-content: center;
-    margin-bottom: 207px;
+    flex-direction: column;
   }
   .container .buttonGroup {
     display: flex;

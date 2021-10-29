@@ -20,4 +20,9 @@ const Accolades = (args) => {
   );
 };
 
+Accolades.propTypes = {
+  head: PropTypes.string,
+  explanation: PropTypes.string,
+};
+
 export default Accolades;

@@ -14,15 +14,20 @@
 }
 .awardsCard {
   border: 1px solid #e0e0e0;
-  box-sizing: border-box;
 }
 .responsiveAwardsCard {
   display: flex;
-  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 366px;
+  height: 126px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 20px 16px;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   height: 126px;
+}
+.responsiveAwardsCard .awardsCardContent {
 }
 .awardsCardWithoutDelete {
   display: flex;
@@ -92,6 +97,7 @@
   .container {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
   .awardsCard {
     width: 174px;
@@ -100,13 +106,6 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-  }
-  .responsiveAwardsCard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
   }
   .awardsCardWithoutDelete {
     display: flex;

@@ -20,7 +20,8 @@ const AwardsCard = (args) => {
         [styles.responsiveAwardsCard]: variations === "responsiveAwardsCard",
         [styles.awardsCardWithoutDelete]:
           variations === "awardsCardWithoutDelete",
-      })}>
+      })}
+      {...args}>
       <div className={styles.trashDeleteIcon} onClick={removeAwardsCard}>
         <TrashDelete />
       </div>

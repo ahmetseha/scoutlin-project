@@ -49,7 +49,7 @@ function SvgAward(props) {
       </g>
       <defs>
         <clipPath id="award_svg__clip0_1:1427">
-          <path fill="" transform="translate(.333)" d="M0 0h86v86H0z" />
+          <path fill="white" transform="translate(.333)" d="M0 0h86v86H0z" />
         </clipPath>
       </defs>
     </svg>
