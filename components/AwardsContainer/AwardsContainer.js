@@ -70,14 +70,13 @@ const AwardsContainer = () => {
       ) : (
         <div className={styles.awardsCardsContainer}>
           <div className={styles.awardsCards}>
-            {addCard.slice(0, 3).map((card, id) => {
+            {addCard.slice(0, 3).map((card) => {
               return (
                 <Link href={`/reward/${id}`}>
                   <AwardsCard
                     variations="awardsCard"
                     onClick={showAccolades}
-                    card={card}
-                    key={id}
+                    key={card.id}
                   />
                 </Link>
               );
