@@ -64,17 +64,29 @@
     justify-content: center;
   }
   .container .awardsCardsContainer {
-    height: 412px;
-    margin: 0 24px;
-  }
-  .container .awardsCardsContainer {
-    width: 90%;
-    margin: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .container .awardsCardsContainer .awardsCards {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 32px 18px;
   }
+  /* .container .awardsCardsContainer .awardsCards > div:last-child {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 366px;
+    height: 126px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 20px 16px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    height: 126px;
+  } */
   .container .buttonGroup {
     display: flex;
     flex-direction: column;

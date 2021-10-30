@@ -28,8 +28,6 @@
   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
   height: 126px;
 }
-.responsiveAwardsCard .awardsCardContent {
-}
 .awardsCardWithoutDelete {
   display: flex;
   justify-content: center;
@@ -96,40 +94,6 @@
 }
 @media (max-width: 600px) {
   .container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-  .awardsCard {
     width: 174px;
-    height: 254px;
-    background: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
-  }
-  .awardsCardWithoutDelete {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    width: 100%;
-    height: 187px;
-  }
-  .container .awardsCardContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    grid-gap: 40px;
-  }
-  .container .awardIcon {
-    background: #ffffff;
-    margin: 0;
-  }
-  .container .trashDeleteIcon {
-    left: 322px;
-    top: 49px;
   }
 }
