@@ -6,7 +6,7 @@ import Award from "../icons/Award";
 import TrashDelete from "../icons/TrashDelete";
 
 const AwardsCard = (args) => {
-  const { variations } = args;
+  const { variations, ...props } = args;
   const [removeCard, setRemoveCard] = useState([]);
 
   const removeAwardsCard = (id) => {
@@ -21,7 +21,7 @@ const AwardsCard = (args) => {
         [styles.awardsCardWithoutDelete]:
           variations === "awardsCardWithoutDelete",
       })}
-      {...args}>
+      {...props}>
       <div className={styles.trashDeleteIcon} onClick={removeAwardsCard}>
         <TrashDelete />
       </div>
