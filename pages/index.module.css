@@ -2,9 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
+}
+.indexButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 @media (max-width: 450px) {
   .container {
     display: block;
+    height: 100%;
   }
 }

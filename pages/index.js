@@ -1,26 +1,19 @@
-// import { useState } from "react";
-import AwardsContainer from "../components/AwardsContainer/AwardsContainer";
+import { useRouter } from "next/router";
+
 import styles from "./index.module.css";
-import AccoladesPreview from "../components/AccoladesPreview/AccoladesPreview";
+import Button from "../components/Button/Button";
 
 export default function Home() {
-  // const [showContainer, setShowContainer] = useState(false);
-
-  // const getAwardsContainer = () => {
-  //   setShowContainer(true);
-  // };
+  const router = useRouter();
 
   return (
-    <div className={styles.container}>
-      {/* {showContainer ? null : (
-        <div className={styles.rewardButtonContainer}>
-          <button className={styles.rewardButton} onClick={getAwardsContainer}>
-            Reward
-          </button>
-        </div>
-      )}
-      {showContainer ? <AwardsContainer /> : null} */}
-      <AwardsContainer />
+    <div className={styles.indexButton}>
+      <Button
+        variations="primary"
+        size="md"
+        label="Reward"
+        onClick={() => router.push("/reward")}
+      />
     </div>
   );
 }
