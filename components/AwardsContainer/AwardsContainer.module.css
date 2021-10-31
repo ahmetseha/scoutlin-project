@@ -14,9 +14,6 @@
 .container .awardsHead .mobileHeader {
   display: none;
 }
-.container .awardsCardsContainer {
-  display: flex;
-}
 .container .awardsCardsContainer .awardsCards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

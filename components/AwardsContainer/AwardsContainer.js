@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useMediaPredicate } from "react-media-hook";
 import uniqid from "uniqid";
-import axios from "axios";
 
 import styles from "./AwardsContainer.module.css";
 import CloseButton from "../CloseButton/CloseButton";
@@ -24,17 +23,12 @@ const AwardsContainer = () => {
   const [showAwardsCardSection, setShowAwardsCardSection] = useState(false);
   const [addCard, setAddCard] = useState([]);
 
-  const showAccolades = () => {
-    setShowAccoladesPrevies(true);
+  const showAccolades = async () => {
+    setShowAccoladesPrevies(!showAccoladesPrevies);
   };
 
   const routerBack = () => {
     router.push("/");
-    // const url = "https://enzwniipnqlq320.m.pipedream.net";
-    // const headers = new Headers();
-    // headers.append("Content-Type", "application/json");
-    // axios.post(url, { headers: { headers } }).then((res) => {
-    // })
   };
 
   const getAward = () => {

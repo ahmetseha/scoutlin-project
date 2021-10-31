@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import styles from "./AwardsCard.module.css";
 import PropTypes from "prop-types";
 import cn from "classnames";
+
+import styles from "./AwardsCard.module.css";
 import Award from "../icons/Award";
 import TrashDelete from "../icons/TrashDelete";
 
@@ -10,9 +11,8 @@ const AwardsCard = (args) => {
   const [removeCard, setRemoveCard] = useState([]);
 
   const removeAwardsCard = (id) => {
-    setRemoveCard((removeCard) => removeCard.filter((q) => q.id !== id));
+    setRemoveCard(() => removeCard.filter((q) => q.id !== id));
   };
-
   return (
     <div
       className={cn(styles.container, {
