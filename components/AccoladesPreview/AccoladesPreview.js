@@ -6,7 +6,7 @@ import DeleteButton from "../DeleteButton/DeleteButton";
 import SquareAwardsSection from "../SquareAwardsSection/SquareAwardsSection";
 import Line from "../icons/Line";
 import AwardsCard from "../AwardsCard/AwardsCard";
-import InputSection from "../InputSection/InputSection";
+import Input from "../Input/Input";
 import Button from "../Button/Button";
 import Award from "../icons/Award";
 
@@ -43,9 +43,23 @@ const AccoladesPreview = () => {
                   <AwardsCard variations="awardsCardWithoutDelete" />
                 </div>
               )}
-              <div className={styles.inputSection}>
-                <InputSection />
-              </div>
+              <form className={styles.inputContainer}>
+                {biggerThan600 && (
+                  <div className={styles.inputContainer}>
+                    <Input label="Write a rank" variations="BlockInput" />
+
+                    <Input label="exp: Altın Örümcek" variations="BlockInput" />
+                  </div>
+                )}
+                {!biggerThan600 && (
+                  <div className={styles.inputContainer}>
+                    <Input label="Choose or ent" variations="input" />
+                    <Input label="Example: Altın Örümcek" variations="input" />
+                    <Input label="Write featured" variations="input" />
+                    <Input label="S" variations="input" />
+                  </div>
+                )}
+              </form>
             </div>
             <div className={styles.saveButton}>
               <Button label="Save Awards" variations="primary" size="block" />

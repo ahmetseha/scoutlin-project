@@ -48,6 +48,7 @@
   margin-bottom: 12px;
 }
 .container .previewContent .cardAndInput .responsiveCard input {
+  width: 58px;
   height: 37px;
   background: #ffffff;
   border: 1px solid #eaeaea;
@@ -68,6 +69,13 @@
   text-align: center;
   color: #000000;
 }
+.container .previewContent .cardAndInput .inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  grid-gap: 16px;
+}
 @media (max-width: 600px) {
   .container {
     border: none;
@@ -81,8 +89,10 @@
     display: flex;
     flex-direction: column;
   }
-  .container .inputSection {
+
+  .container .inputSection .inputContainer {
     margin: 0 16px;
+    width: 100%;
   }
   .container .saveButton {
     margin: 0 16px;
