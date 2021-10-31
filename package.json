@@ -8,10 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
-    "icon": "svgr icons -d components/icons --icon --replace-attr-values \"#fff=currentColor\""
+    "build-storybook": "build-storybook -o public/ui",
+    "icon": "svgr public/icons -d components/icons --icon --replace-attr-values \"#fff=currentColor\""
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "classnames": "^2.3.1",
     "next": "11.1.2",
     "prop-types": "^15.7.2",
