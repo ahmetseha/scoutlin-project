@@ -6,6 +6,13 @@ import Left from "../icons/Left";
 import Right from "../icons/Right";
 
 const SquareAwardsSection = () => {
+  // const [squareAward, setSquareAward] = useState([
+  //   <SquareAwards variations="squareAwardsB" />,
+  //   <SquareAwards variations="squareAwardsS" />
+  //   <SquareAwards variations="squareAwards3" />
+  //   <SquareAwards variations="squareAwardsB" />
+  //   <SquareAwards variations="squareAwardsS" />
+  // ])
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
 
   return (
@@ -13,20 +20,20 @@ const SquareAwardsSection = () => {
       {!biggerThan600 && (
         <div className={styles.container}>
           <Left />
-          <SquareAwards />
-          <SquareAwards />
-          <SquareAwards />
-          <SquareAwards />
-          <SquareAwards />
+          <SquareAwards variations="squareAwardsB" />
+          <SquareAwards variations="squareAwardsS" />
+          <SquareAwards variations="squareAwards3" />
+          <SquareAwards variations="squareAwardsB" />
+          <SquareAwards variations="squareAwardsS" />
           <Right />
         </div>
       )}
       {biggerThan600 && (
         <div className={styles.container}>
           <Left />
-          <SquareAwards />
-          <SquareAwards />
-          <SquareAwards />
+          <SquareAwards variations="squareAwardsB" />
+          <SquareAwards variations="squareAwardsS" />
+          <SquareAwards variations="squareAwards3" />
           <Right />
         </div>
       )}

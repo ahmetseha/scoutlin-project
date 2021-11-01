@@ -7,7 +7,7 @@ import Award from "../icons/Award";
 import TrashDelete from "../icons/TrashDelete";
 
 const AwardsCard = (args) => {
-  const { variations, ...props } = args;
+  const { variations, featured, rank, reward, ...props } = args;
   const [removeCard, setRemoveCard] = useState([]);
 
   const removeAwardsCard = (id) => {
@@ -30,9 +30,9 @@ const AwardsCard = (args) => {
           <Award />
         </div>
         <div className={styles.awardsTitle}>
-          <h5 className={styles.awardsTitleFeature}>FEATURED</h5>
-          <p className={styles.awardTitleRating}>Silver</p>
-          <h5 className={styles.awardsTitleCompetiton}>Kristal Elma</h5>
+          <h5 className={styles.awardsTitleFeature}>{featured}</h5>
+          <p className={styles.awardTitleRating}>{rank}</p>
+          <h5 className={styles.awardsTitleCompetiton}>{reward}</h5>
         </div>
       </div>
     </div>
@@ -45,6 +45,15 @@ AwardsCard.propTypes = {
     "responsiveAwardsCard",
     "awardsCardWithoutDelete",
   ]),
+  featured: PropTypes.string,
+  rank: PropTypes.string,
+  reward: PropTypes.string,
+};
+
+AwardsCard.defaultProps = {
+  featured: "FEATURED",
+  rank: "Silver",
+  reward: "Kristal Elma",
 };
 
 export default AwardsCard;

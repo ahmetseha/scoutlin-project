@@ -17,6 +17,9 @@ const AccoladesPreview = () => {
 
   const [closePreview, setClosePreview] = useState(true);
   const [inputValue, setInputValue] = useState("");
+  const [featuredValue, setFeaturedValue] = useState("");
+  const [rankValue, setRankValue] = useState("");
+  const [rewardValue, setRewardValue] = useState("");
 
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
 
@@ -47,7 +50,7 @@ const AccoladesPreview = () => {
             <p className={styles.title}>Accolades Preview</p>
             <DeleteButton onClick={closeThePreview} />
           </div>
-          <form className={styles.previewContent}>
+          <div className={styles.previewContent}>
             <div className={styles.squareAwardsSection}>
               <SquareAwardsSection />
             </div>
@@ -63,14 +66,30 @@ const AccoladesPreview = () => {
                 </div>
               ) : (
                 <div className={styles.card}>
-                  <AwardsCard variations="awardsCardWithoutDelete" />
+                  <AwardsCard
+                    featured={featuredValue}
+                    rank={rankValue}
+                    reward={rewardValue}
+                    awardCardSvg
+                    variations="awardsCardWithoutDelete"
+                  />
                 </div>
               )}
-              <div className={styles.inputContainer}>
+              <form className={styles.inputContainer}>
                 {biggerThan600 && (
                   <div className={styles.inputContainer}>
-                    <Input label="Write a rank" variations="BlockInput" />
-                    <Input label="exp: Altın Örümcek" variations="BlockInput" />
+                    <Input
+                      value={rankValue}
+                      onChange={(e) => setRankValue(e.target.value)}
+                      label="Write a rank"
+                      variations="BlockInput"
+                    />
+                    <Input
+                      value={rewardValue}
+                      onChange={(e) => setRewardValue(e.target.value)}
+                      label="exp: Altın Örümcek"
+                      variations="BlockInput"
+                    />
                   </div>
                 )}
                 {!biggerThan600 && (
@@ -81,12 +100,27 @@ const AccoladesPreview = () => {
                       label="Choose or ent"
                       variations="input"
                     />
-                    <Input label="Example: Altın Örümcek" variations="input" />
-                    <Input label="Write featured" variations="input" />
-                    <Input label="S" variations="input" />
+                    <Input
+                      value={rewardValue}
+                      onChange={(e) => setRewardValue(e.target.value)}
+                      label="Example: Altın Örümcek"
+                      variations="input"
+                    />
+                    <Input
+                      value={featuredValue}
+                      onChange={(e) => setFeaturedValue(e.target.value)}
+                      label="Write featured"
+                      variations="input"
+                    />
+                    <Input
+                      value={rankValue}
+                      onChange={(e) => setRankValue(e.target.value)}
+                      label="S"
+                      variations="input"
+                    />
                   </div>
                 )}
-              </div>
+              </form>
             </div>
             <div className={styles.saveButton}>
               <Button
@@ -96,7 +130,7 @@ const AccoladesPreview = () => {
                 size="block"
               />
             </div>
-          </form>
+          </div>
         </div>
       ) : null}
     </>

@@ -73,7 +73,13 @@ const AwardsContainer = () => {
             {addCard.slice(0, 3).map((card, id) => {
               return (
                 <Link key={id} href={`/reward/${id}`}>
-                  <AwardsCard variations="awardsCard" onClick={showAccolades} />
+                  <AwardsCard
+                    featured="FEATURED"
+                    rank="Silver"
+                    reward="Kristal Elma"
+                    variations="awardsCard"
+                    onClick={showAccolades}
+                  />
                 </Link>
               );
             })}
