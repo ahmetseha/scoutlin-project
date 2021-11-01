@@ -28,18 +28,15 @@ const AccoladesPreview = () => {
     router.push("/reward");
   };
 
-  const inputValueChange = (e) => {
-    setInputValue(e.target.value);
-  };
-
   const postInputValues = () => {
     const url = "https://enzwniipnqlq320.m.pipedream.net";
     const headers = new Headers();
     headers.append("Content-Type", "application/json");
+    const values = [inputValue, rankValue, rewardValue, featuredValue];
 
-    axios
-      .post(url, { headers: { headers } }, { inputValue })
-      .catch((err) => console.log(err));
+    axios.post(url, values).then((res) => {
+      console.log(res);
+    });
   };
 
   return (
@@ -96,7 +93,7 @@ const AccoladesPreview = () => {
                   <div className={styles.inputContainer}>
                     <Input
                       value={inputValue}
-                      onChange={inputValueChange}
+                      onChange={(e) => setInputValue(e.target.value)}
                       label="Choose or ent"
                       variations="input"
                     />
