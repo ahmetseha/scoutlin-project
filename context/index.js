@@ -12,9 +12,9 @@ export const RewardContext = ({ children }) => {
   const [rankValue, setRankValue] = useState("");
   const [rewardValue, setRewardValue] = useState("");
 
-  const removeAwardsCard = (id) => {
-    setCard(() => card.filter((q) => q.id !== id));
-  };
+  // const removeAwardsCard = (id) => {
+  //   setCard(() => card.filter((q) => q.id !== id));
+  // };
 
   // const values = [inputValue, rankValue, rewardValue, featuredValue];
   // values.forEach((item) => {
@@ -38,7 +38,6 @@ export const RewardContext = ({ children }) => {
         setShow,
         card,
         setCard,
-        removeAwardsCard,
         postInputValues,
         inputValue,
         setInputValue,

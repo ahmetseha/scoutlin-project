@@ -71,9 +71,9 @@ const AwardsContainer = () => {
         <AwardsCardSectionEmpty />
       ) : (
         <div className={styles.awardsCardsContainer}>
-          {card.slice(0, 3).map((card, id) => {
+          {card.slice(0, 3).map((awardCard, id) => {
             return (
-              <div key={id} className={styles.awardsCards}>
+              <div key={card.id} className={styles.awardsCards}>
                 <AwardsCard
                   id={id}
                   featured="FEATURED"

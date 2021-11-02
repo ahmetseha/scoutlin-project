@@ -2,14 +2,14 @@ import PropTypes from "prop-types";
 import cn from "classnames";
 import Link from "next/link";
 
-import { useAppContext } from "../../context";
+// import { useAppContext } from "../../context";
 import styles from "./AwardsCard.module.css";
 import Award from "../icons/Award";
 import TrashDelete from "../icons/TrashDelete";
 
 const AwardsCard = (args) => {
   const { variations, featured, rank, reward, id, ...props } = args;
-  const { removeAwardsCard } = useAppContext();
+  // const { removeAwardsCard } = useAppContext();
 
   return (
     <div
