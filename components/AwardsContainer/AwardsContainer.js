@@ -71,9 +71,9 @@ const AwardsContainer = () => {
         <AwardsCardSectionEmpty />
       ) : (
         <div className={styles.awardsCardsContainer}>
-          <div className={styles.awardsCards}>
-            {card.slice(0, 3).map((card, id) => {
-              return (
+          {card.slice(0, 3).map((card, id) => {
+            return (
+              <div key={id} className={styles.awardsCards}>
                 <AwardsCard
                   id={id}
                   featured="FEATURED"
@@ -82,9 +82,9 @@ const AwardsContainer = () => {
                   variations="awardsCard"
                   onClick={showAccolades}
                 />
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       )}
 
