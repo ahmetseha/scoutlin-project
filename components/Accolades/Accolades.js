@@ -1,5 +1,6 @@
-import styles from "./Accolades.module.css";
 import PropTypes from "prop-types";
+
+import styles from "./Accolades.module.css";
 import Disable2 from "../icons/Disable2";
 
 const Accolades = (args) => {

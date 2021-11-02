@@ -1,6 +1,7 @@
-import styles from "./Button.module.css";
 import PropTypes from "prop-types";
 import cn from "classnames";
+
+import styles from "./Button.module.css";
 
 const Button = (args) => {
   const { label, variations, size, ...props } = args;

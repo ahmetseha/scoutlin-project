@@ -1,8 +1,9 @@
+import PropTypes from "prop-types";
+
 import styles from "./SquareAwards.module.css";
 import Award from "../icons/Award";
 import Award1 from "../icons/Award1";
 import Award2 from "../icons/Award2";
-import PropTypes from "prop-types";
 
 const SquareAwards = (args) => {
   const { variations } = args;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
 import { useMediaPredicate } from "react-media-hook";
+import Link from "next/link";
 import uniqid from "uniqid";
 
 import styles from "./AwardsContainer.module.css";
@@ -19,12 +19,12 @@ const AwardsContainer = () => {
   // media query in jsx (react-media-hook)
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
 
-  const [showAccoladesPrevies, setShowAccoladesPrevies] = useState(false);
+  const [showAccoladesPreview, setShowAccoladesPreview] = useState(false);
   const [showAwardsCardSection, setShowAwardsCardSection] = useState(false);
   const [addCard, setAddCard] = useState([]);
 
   const showAccolades = async () => {
-    setShowAccoladesPrevies(!showAccoladesPrevies);
+    setShowAccoladesPreview(!showAccoladesPreview);
   };
 
   const routerBack = () => {
@@ -59,7 +59,7 @@ const AwardsContainer = () => {
         </div>
       </div>
 
-      {showAccoladesPrevies && (
+      {showAccoladesPreview && (
         <div className={styles.accoladesPreview}>
           <AccoladesPreview />
         </div>
@@ -87,7 +87,7 @@ const AwardsContainer = () => {
         </div>
       )}
 
-      {showAccoladesPrevies ? (
+      {showAccoladesPreview ? (
         <div className={styles.buttonGroup}>
           <Button
             variations="secondary"

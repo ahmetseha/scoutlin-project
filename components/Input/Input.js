@@ -5,12 +5,7 @@ import PropTypes from "prop-types";
 import styles from "./Input.module.css";
 
 const Input = (args) => {
-  const { variations, label, ...props } = args;
-  const [inputValue, setinputValue] = useState(0);
-
-  const inputValueLength = (e) => {
-    setinputValue(e.target.value.length);
-  };
+  const { variations, label, valueLength, ...props } = args;
 
   return (
     <div
@@ -19,22 +14,18 @@ const Input = (args) => {
         [styles.BlockInput]: variations === "BlockInput",
       })}
       {...args}>
-      <input
-        maxLength="15"
-        placeholder={label}
-        onChange={inputValueLength}
-        {...props}
-      />
-      <div className={styles.inputValue}>
-        <span className={styles.value}>{inputValue}</span>/15
+      <input maxLength="15" placeholder={label} valueLength />
+      <div className={styles.inputValue} {...args}>
+        <span className={styles.value}>{valueLength}</span>/15
       </div>
     </div>
   );
 };
 
 Input.propTypes = {
-  variations: PropTypes.oneOf(["input", "BlockInput"]),
+  variations: PropTypes.oneOf(["input", "blockInput"]),
   label: PropTypes.string,
+  valueLength: PropTypes.number,
 };
 
 export default Input;

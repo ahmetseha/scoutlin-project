@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import { useRouter } from "next/router";
+import axios from "axios";
 
 import styles from "./AccoladesPreview.module.css";
 import DeleteButton from "../DeleteButton/DeleteButton";
@@ -10,7 +11,6 @@ import AwardsCard from "../AwardsCard/AwardsCard";
 import Input from "../Input/Input";
 import Button from "../Button/Button";
 import Award from "../icons/Award";
-import axios from "axios";
 
 const AccoladesPreview = () => {
   const router = useRouter();
@@ -34,9 +34,7 @@ const AccoladesPreview = () => {
     headers.append("Content-Type", "application/json");
     const values = [inputValue, rankValue, rewardValue, featuredValue];
 
-    axios.post(url, values).then((res) => {
-      console.log(res);
-    });
+    axios.post(url, values).catch((err) => alert(err));
   };
 
   return (
@@ -80,12 +78,14 @@ const AccoladesPreview = () => {
                       onChange={(e) => setRankValue(e.target.value)}
                       label="Write a rank"
                       variations="BlockInput"
+                      valueLength={rankValue.length}
                     />
                     <Input
                       value={rewardValue}
                       onChange={(e) => setRewardValue(e.target.value)}
                       label="exp: Altın Örümcek"
                       variations="BlockInput"
+                      valueLength={rewardValue.length}
                     />
                   </div>
                 )}
@@ -96,24 +96,28 @@ const AccoladesPreview = () => {
                       onChange={(e) => setInputValue(e.target.value)}
                       label="Choose or ent"
                       variations="input"
+                      valueLength={inputValue.length}
                     />
                     <Input
                       value={rewardValue}
                       onChange={(e) => setRewardValue(e.target.value)}
                       label="Example: Altın Örümcek"
                       variations="input"
+                      valueLength={rewardValue.length}
                     />
                     <Input
                       value={featuredValue}
                       onChange={(e) => setFeaturedValue(e.target.value)}
                       label="Write featured"
                       variations="input"
+                      valueLength={featuredValue.length}
                     />
                     <Input
                       value={rankValue}
                       onChange={(e) => setRankValue(e.target.value)}
                       label="S"
                       variations="input"
+                      valueLength={rankValue.length}
                     />
                   </div>
                 )}

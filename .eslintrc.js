@@ -1,6 +1,6 @@
 module.exports = {
   extends: ["next/core-web-vitals"],
   rules: {
-    "no-console": 0,
+    "no-console": 2,
   },
 };
