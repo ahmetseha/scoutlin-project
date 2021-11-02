@@ -20,9 +20,7 @@ const AwardsCard = (args) => {
           variations === "awardsCardWithoutDelete",
       })}
       {...props}>
-      <div
-        className={styles.trashDeleteIcon}
-        onClick={() => removeAwardsCard(id)}>
+      <div className={styles.trashDeleteIcon}>
         <TrashDelete />
       </div>
       <Link id={id} href={`/reward/${id}`}>
