@@ -3,6 +3,7 @@ import { useMediaPredicate } from "react-media-hook";
 import { useRouter } from "next/router";
 import axios from "axios";
 
+import { useAppContext } from "../../context";
 import styles from "./AccoladesPreview.module.css";
 import DeleteButton from "../DeleteButton/DeleteButton";
 import SquareAwardsSection from "../SquareAwardsSection/SquareAwardsSection";
@@ -15,6 +16,8 @@ import Award from "../icons/Award";
 const AccoladesPreview = () => {
   const router = useRouter();
 
+  const { postInputValues } = useAppContext();
+
   const [closePreview, setClosePreview] = useState(true);
   const [inputValue, setInputValue] = useState("");
   const [featuredValue, setFeaturedValue] = useState("");
@@ -24,17 +27,8 @@ const AccoladesPreview = () => {
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
 
   const closeThePreview = () => {
-    setClosePreview(!closePreview);
+    setClosePreview(false);
     router.push("/reward");
-  };
-
-  const postInputValues = () => {
-    const url = "https://enzwniipnqlq320.m.pipedream.net";
-    const headers = new Headers();
-    headers.append("Content-Type", "application/json");
-    const values = [inputValue, rankValue, rewardValue, featuredValue];
-
-    axios.post(url, values).catch((err) => alert(err));
   };
 
   return (

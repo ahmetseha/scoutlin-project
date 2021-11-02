@@ -4,6 +4,7 @@ import { useMediaPredicate } from "react-media-hook";
 import Link from "next/link";
 import uniqid from "uniqid";
 
+import { useAppContext } from "../../context";
 import styles from "./AwardsContainer.module.css";
 import CloseButton from "../CloseButton/CloseButton";
 import Accolades from "../Accolades/Accolades";
@@ -14,20 +15,22 @@ import MobileHeader from "../MobileHeader/MobileHeader";
 import AccoladesPreview from "../AccoladesPreview/AccoladesPreview";
 
 const AwardsContainer = () => {
+  const { show, setShow, postInputValues } = useAppContext();
+
   const router = useRouter();
 
   // media query in jsx (react-media-hook)
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
 
-  const [showAccoladesPreview, setShowAccoladesPreview] = useState(false);
   const [showAwardsCardSection, setShowAwardsCardSection] = useState(false);
   const [addCard, setAddCard] = useState([]);
 
-  const showAccolades = async () => {
-    setShowAccoladesPreview(!showAccoladesPreview);
+  const showAccolades = () => {
+    setShow(!show);
   };
 
   const routerBack = () => {
+    postInputValues();
     router.push("/");
   };
 
@@ -59,7 +62,7 @@ const AwardsContainer = () => {
         </div>
       </div>
 
-      {showAccoladesPreview && (
+      {show && (
         <div className={styles.accoladesPreview}>
           <AccoladesPreview />
         </div>
@@ -87,7 +90,7 @@ const AwardsContainer = () => {
         </div>
       )}
 
-      {showAccoladesPreview ? (
+      {show ? (
         <div className={styles.buttonGroup}>
           <Button
             variations="secondary"

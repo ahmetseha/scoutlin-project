@@ -14,19 +14,21 @@
 .container .awardsHead .mobileHeader {
   display: none;
 }
+.container .accoladesPreview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.container .awardsCardsContainer {
+  margin-top: 32px;
+}
 .container .awardsCardsContainer .awardsCards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-column-gap: 24px;
   margin-bottom: 32px;
   width: 100%;
-}
-.container .accoladesPreview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 32px;
 }
 .container .buttonGroup {
   display: flex;

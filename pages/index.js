@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from "./index.module.css";
 import Button from "../components/Button/Button";
 
-export default function Home() {
+const Home = () => {
   const router = useRouter();
 
   return (
@@ -16,4 +16,6 @@ export default function Home() {
       />
     </div>
   );
-}
+};
+
+export default Home;
