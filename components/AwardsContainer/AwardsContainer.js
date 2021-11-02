@@ -71,20 +71,22 @@ const AwardsContainer = () => {
         <AwardsCardSectionEmpty />
       ) : (
         <div className={styles.awardsCardsContainer}>
-          {card.slice(0, 3).map((awardCard, id) => {
-            return (
-              <div key={card.id} className={styles.awardsCards}>
-                <AwardsCard
-                  id={id}
-                  featured="FEATURED"
-                  rank="Silver"
-                  reward="Kristal Elma"
-                  variations="awardsCard"
-                  onClick={showAccolades}
-                />
-              </div>
-            );
-          })}
+          <div className={styles.awardsCards}>
+            {card.slice(0, 3).map((awardCard, id) => {
+              return (
+                <div key={card.id}>
+                  <AwardsCard
+                    id={id}
+                    featured="FEATURED"
+                    rank="Silver"
+                    reward="Kristal Elma"
+                    variations="awardsCard"
+                    onClick={showAccolades}
+                  />
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
 
