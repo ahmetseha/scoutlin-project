@@ -8,12 +8,7 @@ const Input = (args) => {
   const { variations, label, valueLength, ...props } = args;
 
   return (
-    <div
-      className={cn(styles.container, {
-        [styles.input]: variations === "input",
-        [styles.BlockInput]: variations === "BlockInput",
-      })}
-      {...args}>
+    <div className={styles.container} {...props}>
       <input maxLength="15" placeholder={label} valueLength />
       <div className={styles.inputValue} {...args}>
         <span className={styles.value}>{valueLength}</span>/15
@@ -23,7 +18,6 @@ const Input = (args) => {
 };
 
 Input.propTypes = {
-  variations: PropTypes.oneOf(["input", "blockInput"]),
   label: PropTypes.string,
   valueLength: PropTypes.number,
 };

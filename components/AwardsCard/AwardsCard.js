@@ -1,18 +1,16 @@
-import React, { useState } from "react";
 import PropTypes from "prop-types";
 import cn from "classnames";
+import Link from "next/link";
 
+import { useAppContext } from "../../context";
 import styles from "./AwardsCard.module.css";
 import Award from "../icons/Award";
 import TrashDelete from "../icons/TrashDelete";
 
 const AwardsCard = (args) => {
-  const { variations, featured, rank, reward, ...props } = args;
-  const [removeCard, setRemoveCard] = useState([]);
+  const { variations, featured, rank, reward, id, ...props } = args;
+  const { removeAwardsCard } = useAppContext();
 
-  const removeAwardsCard = (id) => {
-    setRemoveCard(() => removeCard.filter((q) => q.id !== id));
-  };
   return (
     <div
       className={cn(styles.container, {
@@ -22,19 +20,26 @@ const AwardsCard = (args) => {
           variations === "awardsCardWithoutDelete",
       })}
       {...props}>
-      <div className={styles.trashDeleteIcon} onClick={removeAwardsCard}>
+      <div
+        className={styles.trashDeleteIcon}
+        onClick={() => removeAwardsCard(id)}>
         <TrashDelete />
       </div>
-      <div className={styles.awardsCardContent}>
-        <div className={styles.awardIcon}>
-          <Award />
+      <Link id={id} href={`/reward/${id}`}>
+        <div
+          id={id}
+          href={`/reward/${id}`}
+          className={styles.awardsCardContent}>
+          <div className={styles.awardIcon}>
+            <Award />
+          </div>
+          <div className={styles.awardsTitle}>
+            <h5 className={styles.awardsTitleFeature}>{featured}</h5>
+            <p className={styles.awardTitleRating}>{rank}</p>
+            <h5 className={styles.awardsTitleCompetiton}>{reward}</h5>
+          </div>
         </div>
-        <div className={styles.awardsTitle}>
-          <h5 className={styles.awardsTitleFeature}>{featured}</h5>
-          <p className={styles.awardTitleRating}>{rank}</p>
-          <h5 className={styles.awardsTitleCompetiton}>{reward}</h5>
-        </div>
-      </div>
+      </Link>
     </div>
   );
 };

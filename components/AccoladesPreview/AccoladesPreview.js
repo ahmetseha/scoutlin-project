@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useMediaPredicate } from "react-media-hook";
 import { useRouter } from "next/router";
-import axios from "axios";
 
 import { useAppContext } from "../../context";
 import styles from "./AccoladesPreview.module.css";
@@ -16,17 +15,25 @@ import Award from "../icons/Award";
 const AccoladesPreview = () => {
   const router = useRouter();
 
-  const { postInputValues } = useAppContext();
+  const {
+    setShow,
+    inputValue,
+    setInputValue,
+    featuredValue,
+    setFeaturedValue,
+    rankValue,
+    setRankValue,
+    rewardValue,
+    setRewardValue,
+    postInputValues,
+  } = useAppContext();
 
   const [closePreview, setClosePreview] = useState(true);
-  const [inputValue, setInputValue] = useState("");
-  const [featuredValue, setFeaturedValue] = useState("");
-  const [rankValue, setRankValue] = useState("");
-  const [rewardValue, setRewardValue] = useState("");
 
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
 
   const closeThePreview = () => {
+    setShow(false);
     setClosePreview(false);
     router.push("/reward");
   };

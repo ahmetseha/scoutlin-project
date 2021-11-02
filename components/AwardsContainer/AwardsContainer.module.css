@@ -20,9 +20,6 @@
   align-items: center;
   width: 100%;
 }
-.container .awardsCardsContainer {
-  margin-top: 32px;
-}
 .container .awardsCardsContainer .awardsCards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

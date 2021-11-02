@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useMediaPredicate } from "react-media-hook";
-import Link from "next/link";
 import uniqid from "uniqid";
 
 import { useAppContext } from "../../context";
@@ -15,29 +14,29 @@ import MobileHeader from "../MobileHeader/MobileHeader";
 import AccoladesPreview from "../AccoladesPreview/AccoladesPreview";
 
 const AwardsContainer = () => {
-  const { show, setShow, postInputValues } = useAppContext();
-
+  const { show, setShow, card, setCard, postInputValues } = useAppContext();
   const router = useRouter();
 
+  const [showAwardsCardSection, setShowAwardsCardSection] = useState(false);
   // media query in jsx (react-media-hook)
   const biggerThan600 = useMediaPredicate("(max-width: 600px)");
-
-  const [showAwardsCardSection, setShowAwardsCardSection] = useState(false);
-  const [addCard, setAddCard] = useState([]);
 
   const showAccolades = () => {
     setShow(!show);
   };
-
-  const routerBack = () => {
-    postInputValues();
+  const saveAndExit = async () => {
+    await postInputValues();
+    setShow(false);
     router.push("/");
   };
-
-  const getAward = () => {
+  const routerBack = () => {
+    setShow(false);
+    router.push("/");
+  };
+  const newAward = () => {
     setShowAwardsCardSection(true);
     const id = uniqid();
-    setAddCard((addCard) => [...addCard, { id: id }]);
+    setCard((card) => [...card, { id: id }]);
   };
 
   return (
@@ -73,17 +72,16 @@ const AwardsContainer = () => {
       ) : (
         <div className={styles.awardsCardsContainer}>
           <div className={styles.awardsCards}>
-            {addCard.slice(0, 3).map((card, id) => {
+            {card.slice(0, 3).map((card, id) => {
               return (
-                <Link key={id} href={`/reward/${id}`}>
-                  <AwardsCard
-                    featured="FEATURED"
-                    rank="Silver"
-                    reward="Kristal Elma"
-                    variations="awardsCard"
-                    onClick={showAccolades}
-                  />
-                </Link>
+                <AwardsCard
+                  id={id}
+                  featured="FEATURED"
+                  rank="Silver"
+                  reward="Kristal Elma"
+                  variations="awardsCard"
+                  onClick={showAccolades}
+                />
               );
             })}
           </div>
@@ -96,13 +94,13 @@ const AwardsContainer = () => {
             variations="secondary"
             size="md"
             label="New Award"
-            onClick={getAward}
+            onClick={newAward}
           />
           <Button
             variations="primary"
             size="md"
             label="Save and Exit"
-            onClick={routerBack}
+            onClick={saveAndExit}
           />
         </div>
       ) : (
@@ -117,7 +115,7 @@ const AwardsContainer = () => {
             variations="primary"
             size="md"
             label="New Award"
-            onClick={getAward}
+            onClick={newAward}
           />
         </div>
       )}
